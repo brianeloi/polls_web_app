@@ -8,9 +8,9 @@ module ChoiceValidable
   private
 
   def validate_choice
-    return if self.poll.choices.include?(self.choice)
+    return if poll.choices.include?(choice)
 
-    msg = "Choice '#{self.choice}' isn't listed on Poll's choices: #{self.poll.choices}"
-    self.errors.add(:choice, msg)
+    msg = "Choice '#{choice}' isn't listed on Poll's choices: #{poll.choices}"
+    errors.add(:choice, msg)
   end
 end
