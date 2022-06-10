@@ -405,3 +405,330 @@ FOREIGN KEY ("user_id")
   [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/api/v1/polls.json" for ::1 at 2022-06-08 11:03:28 -0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:8:in `index'
+Completed 200 OK in 152ms (Views: 28.0ms | ActiveRecord: 2.5ms | Allocations: 17294)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-06-08 11:06:45 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 2558)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-06-08 11:07:38 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.2ms | Allocations: 1471)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-06-08 11:07:44 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 2537)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-06-08 11:11:36 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#index as JSON
+  Parameters: {"poll"=>{"title"=>"Titulo de Poll", "description"=>"Descrição para Poll"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:8:in `index'
+Completed 200 OK in 28ms (Views: 11.6ms | ActiveRecord: 2.3ms | Allocations: 13743)
+
+
+Started POST "/api/v1/polls.json" for ::1 at 2022-06-08 11:12:02 -0300
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Titulo de Poll", "description"=>"Descrição para Poll"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:20:in `create'
+  [1m[36mPoll Create (2.9ms)[0m  [1m[32mINSERT INTO "polls" ("title", "description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Titulo de Poll"], ["description", "Descrição para Poll"], ["user_id", 1], ["created_at", "2022-06-08 14:12:02.665725"], ["updated_at", "2022-06-08 14:12:02.665725"]]
+  ↳ app/controllers/api/v1/polls_controller.rb:20:in `create'
+  [1m[35m (17.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:20:in `create'
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 21.0ms | Allocations: 4624)
+
+
+  
+JSON::ParserError (783: unexpected token at '--- []
+'):
+  
+app/models/poll.rb:13:in `choices'
+app/controllers/api/v1/polls_controller.rb:21:in `create'
+Started POST "/api/v1/polls.json" for ::1 at 2022-06-08 11:13:05 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Titulo de Poll", "description"=>"Descrição para Poll"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:21:in `create'
+  [1m[36mPoll Create (16.2ms)[0m  [1m[32mINSERT INTO "polls" ("title", "description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Titulo de Poll"], ["description", "Descrição para Poll"], ["user_id", 1], ["created_at", "2022-06-08 14:14:56.688723"], ["updated_at", "2022-06-08 14:14:56.688723"]]
+  ↳ app/controllers/api/v1/polls_controller.rb:21:in `create'
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:21:in `create'
+Completed 500 Internal Server Error in 110956ms (ActiveRecord: 23.9ms | Allocations: 210368)
+
+
+  
+JSON::ParserError (783: unexpected token at '--- []
+'):
+  
+app/models/poll.rb:13:in `choices'
+app/controllers/api/v1/polls_controller.rb:22:in `create'
+Started POST "/api/v1/polls.json" for ::1 at 2022-06-08 11:18:26 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Titulo de Poll", "description"=>"Descrição para Poll", "choices"=>"\"[\\\"a\\\",\\\"b\\\",\\\"c\\\"]\""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 49141ms (ActiveRecord: 1.1ms | Allocations: 54417)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/api/v1/polls_controller.rb:52:in `poll_params'
+app/controllers/api/v1/polls_controller.rb:19:in `create'
+Started POST "/api/v1/polls.json" for ::1 at 2022-06-08 11:19:20 -0300
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Titulo de Poll", "description"=>"Descrição para Poll", "choices"=>"[\"a\",\"b\",\"c\"]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 145850ms (ActiveRecord: 0.3ms | Allocations: 285249)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/api/v1/polls_controller.rb:52:in `poll_params'
+app/controllers/api/v1/polls_controller.rb:19:in `create'
+Started POST "/api/v1/polls.json" for ::1 at 2022-06-08 11:21:51 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Titulo de Poll", "description"=>"Descrição para Poll", "choices"=>"[\"a\",\"b\",\"c\"]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 43954ms (ActiveRecord: 1.9ms | Allocations: 54589)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/api/v1/polls_controller.rb:52:in `poll_params'
+app/controllers/api/v1/polls_controller.rb:18:in `create'
+Started POST "/api/v1/polls.json" for ::1 at 2022-06-08 11:22:45 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Titulo de Poll", "description"=>"Descrição para Poll", "choices"=>"[\"a\",\"b\",\"c\"]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:20:in `create'
+  [1m[36mPoll Create (1.5ms)[0m  [1m[32mINSERT INTO "polls" ("title", "description", "user_id", "created_at", "updated_at", "choices") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Titulo de Poll"], ["description", "Descrição para Poll"], ["user_id", 1], ["created_at", "2022-06-08 14:22:46.113020"], ["updated_at", "2022-06-08 14:22:46.113020"], ["choices", "[\"a\", \"b\", \"c\"]"]]
+  ↳ app/controllers/api/v1/polls_controller.rb:20:in `create'
+  [1m[35m (10.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:20:in `create'
+Completed 201 Created in 46ms (Views: 1.1ms | ActiveRecord: 14.3ms | Allocations: 15287)
+
+
+Started GET "/api/v1/contacts/2" for ::1 at 2022-06-08 11:28:13 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/contacts/2"):
+  
+actionpack (6.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/polls/2" for ::1 at 2022-06-08 11:28:34 -0300
+Processing by Api::V1::PollsController#show as */*
+  Parameters: {"poll"=>{"choices"=>"['a','b','d']"}, "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 2058)
+
+
+  
+NoMethodError (undefined method `user' for nil:NilClass
+Did you mean?  super):
+  
+app/controllers/api/v1/polls_controller.rb:57:in `require_authorization!'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "polls"[0m
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started GET "/api/v1/polls/2" for ::1 at 2022-06-08 11:31:10 -0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::PollsController#show as */*
+  Parameters: {"poll"=>{"choices"=>"['a','b','d']"}, "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.4ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ (pry):3:in `require_authorization!'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:58:in `require_authorization!'
+Completed 500 Internal Server Error in 73606ms (ActiveRecord: 2.9ms | Allocations: 161206)
+
+
+  
+JSON::ParserError (783: unexpected token at '--- []
+'):
+  
+app/models/poll.rb:13:in `choices'
+app/controllers/api/v1/polls_controller.rb:13:in `show'
+Started GET "/api/v1/polls/2" for ::1 at 2022-06-08 11:32:32 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#show as */*
+  Parameters: {"poll"=>{"choices"=>"['a','b','d']"}, "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:46:in `set_poll'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:58:in `require_authorization!'
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 2.8ms | Allocations: 14268)
+
+
+  
+JSON::ParserError (783: unexpected token at '--- []
+'):
+  
+app/models/poll.rb:13:in `choices'
+app/controllers/api/v1/polls_controller.rb:14:in `show'
+Started GET "/api/v1/polls/2" for ::1 at 2022-06-08 11:33:05 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#show as */*
+  Parameters: {"poll"=>{"choices"=>"['a','b','d']"}, "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:46:in `set_poll'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:58:in `require_authorization!'
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 2.5ms | Allocations: 14247)
+
+
+  
+JSON::ParserError (783: unexpected token at '--- []
+'):
+  
+app/models/poll.rb:13:in `choices'
+app/controllers/api/v1/polls_controller.rb:14:in `show'
+Started PUT "/api/v1/polls/2" for ::1 at 2022-06-08 11:33:54 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#update as */*
+  Parameters: {"poll"=>{"choices"=>"['a','b','d']"}, "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:46:in `set_poll'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:58:in `require_authorization!'
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 2.4ms | Allocations: 14157)
+
+
+  
+JSON::ParserError (434: unexpected token at ''a','b','d']'):
+  
+app/controllers/api/v1/polls_controller.rb:52:in `poll_params'
+app/controllers/api/v1/polls_controller.rb:30:in `update'
+Started PUT "/api/v1/polls/2" for ::1 at 2022-06-08 11:34:27 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#update as */*
+  Parameters: {"poll"=>{"choices"=>"['a','b','d']"}, "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:46:in `set_poll'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:59:in `require_authorization!'
+Completed 500 Internal Server Error in 51614ms (ActiveRecord: 3.0ms | Allocations: 270510)
+
+
+  
+JSON::ParserError (434: unexpected token at ''a','b','d']'):
+  
+app/controllers/api/v1/polls_controller.rb:53:in `poll_params'
+app/controllers/api/v1/polls_controller.rb:30:in `update'
+Started PUT "/api/v1/polls/2" for ::1 at 2022-06-08 11:35:49 -0300
+Processing by Api::V1::PollsController#update as */*
+  Parameters: {"poll"=>{"choices"=>"[\"a\",\"b\",\"d\"]"}, "id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:46:in `set_poll'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:59:in `require_authorization!'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:30:in `update'
+  [1m[36mPoll Update (16.3ms)[0m  [1m[33mUPDATE "polls" SET "choices" = ?, "updated_at" = ? WHERE "polls"."id" = ?[0m  [["choices", "[\"a\", \"b\", \"d\"]"], ["updated_at", "2022-06-08 14:35:54.620110"], ["id", 2]]
+  ↳ app/controllers/api/v1/polls_controller.rb:30:in `update'
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:30:in `update'
+Completed 200 OK in 5344ms (Views: 1.5ms | ActiveRecord: 28.0ms | Allocations: 21913)
+
+
+  [1m[35m (34.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "polls"[0m
+  [1m[36mPoll Load (0.7ms)[0m  [1m[34mSELECT "polls".* FROM "polls" LIMIT ?[0m  [["LIMIT", 11]]
+Started DELETE "/api/v1/polls/1" for ::1 at 2022-06-10 10:39:11 -0300
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::PollsController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (1.0ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:46:in `set_poll'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:58:in `require_authorization!'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:39:in `destroy'
+  [1m[36mPoll Destroy (6.6ms)[0m  [1m[31mDELETE FROM "polls" WHERE "polls"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:39:in `destroy'
+  [1m[35m (5.5ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:39:in `destroy'
+Completed 500 Internal Server Error in 371ms (ActiveRecord: 21.1ms | Allocations: 18579)
+
+
+  
+ActiveRecord::InvalidForeignKey (SQLite3::ConstraintException: FOREIGN KEY constraint failed):
+  
+app/controllers/api/v1/polls_controller.rb:39:in `destroy'
+Started DELETE "/api/v1/polls/4" for ::1 at 2022-06-10 10:40:15 -0300
+Processing by Api::V1::PollsController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (1.0ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:46:in `set_poll'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:58:in `require_authorization!'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:39:in `destroy'
+  [1m[36mPoll Destroy (5.7ms)[0m  [1m[31mDELETE FROM "polls" WHERE "polls"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/api/v1/polls_controller.rb:39:in `destroy'
+  [1m[35m (48.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:39:in `destroy'
+Completed 204 No Content in 124ms (ActiveRecord: 57.1ms | Allocations: 4512)
+
+
