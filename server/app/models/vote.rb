@@ -6,7 +6,7 @@ class Vote < ApplicationRecord
   include ChoiceValidable
 
   belongs_to :poll, class_name: 'Poll'
-  belongs_to :user, class_name: 'User'
+  belongs_to :user, class_name: 'User', optional: true
 
   validates :choice, presence: true
 end

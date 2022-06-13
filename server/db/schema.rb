@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 2022_06_07_190628) do
     t.string "choice"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id", null: false
+    t.integer "user_id"
     t.index ["poll_id"], name: "index_votes_on_poll_id"
     t.index ["user_id"], name: "index_votes_on_user_id"
   end

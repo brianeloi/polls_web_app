@@ -1,6 +1,7 @@
 class Api::V1::PollsController < Api::V1::ApiController
+    before_action :require_authentication!
     before_action :set_poll, only: [:show, :update, :destroy]
-    before_action :require_authorization!, only: [:show, :update, :destroy]
+    before_action :require_authorization!, only: [:update, :destroy]
 
     # GET /api/v1/polls
     def index
@@ -56,7 +57,7 @@ class Api::V1::PollsController < Api::V1::ApiController
 
     def require_authorization!
         unless current_user == @poll.user
-            render json: {}, status: :forbidden
+            render json: { error: "User need to be the owner to edit or delete a Poll" }, status: :unauthorized
         end
     end
 end

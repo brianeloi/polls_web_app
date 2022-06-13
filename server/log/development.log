@@ -732,3 +732,1368 @@ Processing by Api::V1::PollsController#destroy as */*
 Completed 204 No Content in 124ms (ActiveRecord: 57.1ms | Allocations: 4512)
 
 
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/api/v1/register" for ::1 at 2022-06-10 16:03:28 -0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/register"):
+  
+actionpack (6.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/register" for ::1 at 2022-06-10 16:04:02 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Devise):
+  
+actionpack (6.0.5) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.5) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.5) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+activerecord (6.0.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/register" for ::1 at 2022-06-10 16:05:40 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Devise::RegistrationsController#new as */*
+  Parameters: {"email"=>"usermail2@mail.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 677)
+
+
+  
+NoMethodError (undefined method `validatable?' for nil:NilClass):
+  
+devise (4.8.1) app/controllers/devise_controller.rb:172:in `set_minimum_password_length'
+activesupport (6.0.5) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.5) lib/active_support/callbacks.rb:181:in `block (2 levels) in halting_and_conditional'
+actionpack (6.0.5) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.5) lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.5) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.5) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.5) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.5) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.5) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.5) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.5) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.5) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+activerecord (6.0.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/rails/info/routes" for ::1 at 2022-06-10 16:06:17 -0300
+Processing by Rails::InfoController#routes as HTML
+  Rendering C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/railties-6.0.5/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/actionpack-6.0.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb [42 times] (Duration: 19.3ms | Allocations: 4789)
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/actionpack-6.0.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 84.1ms | Allocations: 1192)
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/railties-6.0.5/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 129.9ms | Allocations: 9460)
+Completed 200 OK in 262ms (Views: 185.2ms | ActiveRecord: 0.0ms | Allocations: 13378)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-06-10 16:06:18 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/rails/info/routes" for ::1 at 2022-06-10 16:08:01 -0300
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::InfoController#routes as HTML
+  Rendering C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/railties-6.0.5/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/actionpack-6.0.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb [45 times] (Duration: 21.1ms | Allocations: 5091)
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/actionpack-6.0.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 5.0ms | Allocations: 977)
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/railties-6.0.5/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 39.7ms | Allocations: 9605)
+Completed 200 OK in 62ms (Views: 50.2ms | ActiveRecord: 0.0ms | Allocations: 12354)
+
+
+Started GET "/user/sign_up" for ::1 at 2022-06-10 16:08:26 -0300
+Processing by Devise::RegistrationsController#new as */*
+  Parameters: {"email"=>"usermail2@mail.com", "password"=>"[FILTERED]"}
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 6073)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started GET "/users/sign_in" for ::1 at 2022-06-10 16:12:48 -0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+actionpack (6.0.5) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.5) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.5) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+activerecord (6.0.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/user/sign_up" for ::1 at 2022-06-10 16:13:45 -0300
+Processing by Devise::RegistrationsController#new as */*
+  Parameters: {"email"=>"usermail2@mail.com", "password"=>"[FILTERED]"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 203)
+
+
+Started GET "/user/sign_up.json" for ::1 at 2022-06-10 16:16:40 -0300
+Processing by Devise::RegistrationsController#new as JSON
+  Parameters: {"email"=>"usermail2@mail.com", "password"=>"[FILTERED]"}
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 187)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+responders (3.0.1) lib/action_controller/respond_with.rb:215:in `respond_with'
+devise (4.8.1) app/controllers/devise/registrations_controller.rb:12:in `new'
+actionpack (6.0.5) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.5) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.5) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.5) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.5) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.5) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.5) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.5) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.5) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.5) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.5) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.5) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (6.0.5) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+activerecord (6.0.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/user/sign_up" for ::1 at 2022-06-10 16:16:52 -0300
+Processing by Devise::RegistrationsController#new as */*
+  Parameters: {"email"=>"usermail2@mail.com", "password"=>"[FILTERED]"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 200)
+
+
+Started GET "/user/sign_up" for ::1 at 2022-06-10 16:17:42 -0300
+Processing by Devise::RegistrationsController#new as */*
+  Parameters: {"email"=>"usermail2@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 192)
+
+
+Started GET "/user/sign_up.html" for ::1 at 2022-06-10 16:18:23 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Parameters: {"email"=>"usermail2@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 191)
+
+
+Started GET "/user/sign_up.html" for ::1 at 2022-06-10 16:20:03 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Parameters: {"user"=>{"email"=>"usermail2@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 192)
+
+
+Started GET "/" for ::1 at 2022-06-10 16:25:05 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/railties-6.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/railties-6.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 67.6ms | Allocations: 184)
+Completed 200 OK in 71ms (Views: 68.9ms | ActiveRecord: 0.0ms | Allocations: 782)
+
+
+Started GET "/user/sign_up.html" for ::1 at 2022-06-10 16:37:31 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Parameters: {"user"=>{"email"=>"usermail2@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 5238)
+
+
+Started POST "/api/v1/polls.json" for ::1 at 2022-06-10 16:41:48 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Titulo de Poll 2", "description"=>"Descrição para Poll 2", "choices"=>"[\"a\",\"b\",\"c\"]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 2.2ms | Allocations: 8508)
+
+
+  
+NoMethodError (undefined method `user' for nil:NilClass
+Did you mean?  super):
+  
+app/controllers/api/v1/polls_controller.rb:64:in `require_authorization!'
+Started POST "/api/v1/polls.json" for ::1 at 2022-06-10 16:42:50 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Titulo de Poll 2", "description"=>"Descrição para Poll 2", "choices"=>"[\"a\",\"b\",\"c\"]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Filter chain halted as :require_authorization! rendered or redirected
+Completed 403 Forbidden in 17ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 7526)
+
+
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started POST "/api/v1/polls.json" for ::1 at 2022-06-10 16:45:55 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Titulo de Poll 2", "description"=>"Descrição para Poll 2", "choices"=>"[\"a\",\"b\",\"c\"]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 16ms (ActiveRecord: 1.6ms | Allocations: 7378)
+
+
+Started POST "/api/v1/polls.json" for ::1 at 2022-06-10 16:46:00 -0300
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Titulo de Poll 2", "description"=>"Descrição para Poll 2", "choices"=>"[\"a\",\"b\",\"c\"]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms | Allocations: 2110)
+
+
+  
+NoMethodError (undefined method `user' for nil:NilClass
+Did you mean?  super):
+  
+app/controllers/api/v1/polls_controller.rb:64:in `require_authorization!'
+Started POST "/api/v1/polls.json" for ::1 at 2022-06-10 16:46:10 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Titulo de Poll 2", "description"=>"Descrição para Poll 2", "choices"=>"[\"a\",\"b\",\"c\"]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:21:in `create'
+  [1m[36mPoll Create (2.7ms)[0m  [1m[32mINSERT INTO "polls" ("title", "description", "user_id", "created_at", "updated_at", "choices") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Titulo de Poll 2"], ["description", "Descrição para Poll 2"], ["user_id", 1], ["created_at", "2022-06-10 19:46:10.859311"], ["updated_at", "2022-06-10 19:46:10.859311"], ["choices", "[\"a\", \"b\", \"c\"]"]]
+  ↳ app/controllers/api/v1/polls_controller.rb:21:in `create'
+  [1m[35m (21.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:21:in `create'
+Completed 201 Created in 79ms (Views: 3.2ms | ActiveRecord: 27.1ms | Allocations: 16584)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-06-10 16:49:50 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "usermail2@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "_axDntp_y55eBqHayZA8"]]
+  [1m[36mUser Create (2.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "authentication_token") VALUES (?, ?, ?, ?, ?)[0m  [["email", "usermail2@email.com"], ["encrypted_password", "$2a$12$0TMgMK24MAU9ZsUg/pESj.vePs12r7XIEKir7Sk76CjjQbOQGjGB."], ["created_at", "2022-06-10 19:50:41.411500"], ["updated_at", "2022-06-10 19:50:41.411500"], ["authentication_token", "_axDntp_y55eBqHayZA8"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+Started PUT "/api/v1/polls/5" for ::1 at 2022-06-10 16:51:09 -0300
+Processing by Api::V1::PollsController#update as */*
+  Parameters: {"poll"=>{"choices"=>"[\"a\",\"b\",\"z\"]"}, "id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail2@mail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 9ms (ActiveRecord: 1.7ms | Allocations: 2825)
+
+
+Started GET "/user/sign_in" for ::1 at 2022-06-10 16:51:09 -0300
+Processing by Devise::SessionsController#new as */*
+Completed 200 OK in 24ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 5291)
+
+
+Started PUT "/api/v1/polls/5" for ::1 at 2022-06-10 16:51:58 -0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::PollsController#update as */*
+  Parameters: {"poll"=>{"choices"=>"[\"a\",\"b\",\"z\"]"}, "id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail2@email.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:52:in `set_poll'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:64:in `require_authorization!'
+Filter chain halted as :require_authorization! rendered or redirected
+Completed 401 Unauthorized in 89ms (Views: 0.2ms | ActiveRecord: 4.0ms | Allocations: 16625)
+
+
+Started PUT "/api/v1/polls/5" for ::1 at 2022-06-10 16:52:33 -0300
+Processing by Api::V1::PollsController#update as */*
+  Parameters: {"poll"=>{"choices"=>"[\"a\",\"b\",\"z\"]"}, "id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:52:in `set_poll'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:64:in `require_authorization!'
+Completed 422 Unprocessable Entity in 8ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 2782)
+
+
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started PUT "/api/v1/polls/5" for ::1 at 2022-06-10 16:53:37 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#update as */*
+  Parameters: {"poll"=>{"choices"=>"[\"a\",\"b\",\"z\"]"}, "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:52:in `set_poll'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ (pry):1:in `require_authorization!'
+Completed 422 Unprocessable Entity in 23390ms (Views: 0.1ms | ActiveRecord: 2.7ms | Allocations: 90467)
+
+
+Started PUT "/api/v1/polls/5" for ::1 at 2022-06-10 16:55:15 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::PollsController#update as */*
+  Parameters: {"poll"=>{"choices"=>"[\"a\",\"b\",\"z\"]"}, "id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.4ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:46:in `set_poll'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:58:in `require_authorization!'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:30:in `update'
+  [1m[36mPoll Update (1.7ms)[0m  [1m[33mUPDATE "polls" SET "choices" = ?, "updated_at" = ? WHERE "polls"."id" = ?[0m  [["choices", "[\"a\", \"b\", \"z\"]"], ["updated_at", "2022-06-10 19:55:15.584529"], ["id", 5]]
+  ↳ app/controllers/api/v1/polls_controller.rb:30:in `update'
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:30:in `update'
+Completed 200 OK in 103ms (Views: 3.0ms | ActiveRecord: 13.4ms | Allocations: 19571)
+
+
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" ORDER BY "votes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/rails/info/routes" for ::1 at 2022-06-13 09:18:23 -0300
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::InfoController#routes as HTML
+  Rendering C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/railties-6.0.5/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/actionpack-6.0.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb [45 times] (Duration: 26.8ms | Allocations: 5101)
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/actionpack-6.0.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 46.8ms | Allocations: 978)
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/railties-6.0.5/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 98.7ms | Allocations: 9640)
+Completed 200 OK in 214ms (Views: 143.3ms | ActiveRecord: 0.0ms | Allocations: 12384)
+
+
+  [1m[36mVote Load (5.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" ORDER BY "votes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" ORDER BY "votes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPoll Load (2.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPoll Load (0.9ms)[0m  [1m[34mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 11:16:18 -0300
+  [1m[35m (9.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant Api::V1::VotesController
+Did you mean?  Api::V1::VotesControler):
+  
+actionpack (6.0.5) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.5) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.5) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+activerecord (6.0.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 11:19:37 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 2.9ms | Allocations: 8912)
+
+
+  
+NoMethodError (undefined method `poll' for nil:NilClass):
+  
+app/controllers/api/v1/votes_controller.rb:63:in `authenticate_poll?'
+app/controllers/api/v1/votes_controller.rb:57:in `require_authentication!'
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 11:21:42 -0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ (pry):6:in `require_authentication!'
+Completed 500 Internal Server Error in 604871ms (ActiveRecord: 2.5ms | Allocations: 605754)
+
+
+  
+NameError (undefined local variable or method `vote' for #<Api::V1::VotesController:0x0000024bc18502a0>):
+  
+app/controllers/api/v1/votes_controller.rb:19:in `create'
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 11:35:01 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 1.2ms | Allocations: 8912)
+
+
+  
+NoMethodError (undefined method `poll' for nil:NilClass):
+  
+app/controllers/api/v1/votes_controller.rb:63:in `authenticate_poll?'
+app/controllers/api/v1/votes_controller.rb:57:in `require_authentication!'
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 11:35:44 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.9ms | Allocations: 8000)
+
+
+  
+NoMethodError (undefined method `poll' for nil:NilClass):
+  
+app/controllers/api/v1/votes_controller.rb:63:in `authenticate_poll?'
+app/controllers/api/v1/votes_controller.rb:57:in `require_authentication!'
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 11:36:19 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:64:in `authenticate_poll?'
+Completed 400 Bad Request in 43ms (ActiveRecord: 2.4ms | Allocations: 14356)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: vote):
+  
+app/controllers/api/v1/votes_controller.rb:47:in `vote_params'
+app/controllers/api/v1/votes_controller.rb:19:in `create'
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 11:37:52 -0300
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms | Allocations: 2032)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/api/v1/votes_controller.rb:66:in `authenticate_poll?'
+app/controllers/api/v1/votes_controller.rb:57:in `require_authentication!'
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 11:39:08 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+[31mUnpermitted parameters: :poll_id, :user_id[0m
+Completed 500 Internal Server Error in 38572ms (ActiveRecord: 2.6ms | Allocations: 232630)
+
+
+  
+NoMethodError (undefined method `choices' for nil:NilClass):
+  
+app/models/concerns/choice_validable.rb:11:in `validate_choice'
+app/controllers/api/v1/votes_controller.rb:21:in `create'
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 11:40:06 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+[31mUnpermitted parameters: :poll_id, :user_id[0m
+[31mUnpermitted parameters: :poll_id, :user_id[0m
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 2.8ms | Allocations: 15103)
+
+
+  
+NoMethodError (undefined method `choices' for nil:NilClass):
+  
+app/models/concerns/choice_validable.rb:11:in `validate_choice'
+app/controllers/api/v1/votes_controller.rb:21:in `create'
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 11:41:14 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.4ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:64:in `authenticate_poll?'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mVote Create (1.8ms)[0m  [1m[32mINSERT INTO "votes" ("poll_id", "choice", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["poll_id", 1], ["choice", "2"], ["created_at", "2022-06-13 14:41:14.550008"], ["updated_at", "2022-06-13 14:41:14.550008"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:21:in `create'
+  [1m[35m (17.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/votes_controller.rb:21:in `create'
+Completed 500 Internal Server Error in 75ms (Views: 0.6ms | ActiveRecord: 24.0ms | Allocations: 21124)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/api/v1/votes_controller.rb:23:in `create'
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 11:42:34 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:68:in `authenticate_poll?'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mVote Create (1.3ms)[0m  [1m[32mINSERT INTO "votes" ("poll_id", "choice", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["poll_id", 1], ["choice", "2"], ["created_at", "2022-06-13 14:42:35.019002"], ["updated_at", "2022-06-13 14:42:35.019002"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:21:in `create'
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/votes_controller.rb:21:in `create'
+Completed 201 Created in 59ms (Views: 0.5ms | ActiveRecord: 11.8ms | Allocations: 20399)
+
+
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 11:42:55 -0300
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "user_id"=>"1", "choice"=>"4"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:68:in `authenticate_poll?'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mPoll Load (0.6ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/votes_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 16ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 4345)
+
+
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 11:43:16 -0300
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.3ms | Allocations: 1462)
+
+
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 11:44:16 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 15ms (ActiveRecord: 1.8ms | Allocations: 7413)
+
+
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 11:47:57 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:69:in `authenticate_poll?'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mVote Create (1.8ms)[0m  [1m[32mINSERT INTO "votes" ("poll_id", "choice", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["poll_id", 1], ["choice", "2"], ["created_at", "2022-06-13 14:48:30.285789"], ["updated_at", "2022-06-13 14:48:30.285789"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:21:in `create'
+  [1m[35m (13.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/votes_controller.rb:21:in `create'
+Completed 201 Created in 32233ms (Views: 1.1ms | ActiveRecord: 19.0ms | Allocations: 99000)
+
+
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 11:49:01 -0300
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.4ms | Allocations: 1472)
+
+
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 11:52:36 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 25ms (ActiveRecord: 1.9ms | Allocations: 7396)
+
+
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 11:53:15 -0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 34ms (ActiveRecord: 1.7ms | Allocations: 8301)
+
+
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 11:53:28 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 16ms (ActiveRecord: 1.8ms | Allocations: 7405)
+
+
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 11:59:47 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.4ms | Allocations: 6945)
+
+
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 12:02:00 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 32ms (ActiveRecord: 1.6ms | Allocations: 8305)
+
+
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 12:02:22 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 17ms (ActiveRecord: 2.4ms | Allocations: 7409)
+
+
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 12:02:38 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 18ms (ActiveRecord: 1.3ms | Allocations: 7391)
+
+
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 13:22:27 -0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 33ms (ActiveRecord: 2.2ms | Allocations: 8305)
+
+
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 13:23:03 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3320787ms (ActiveRecord: 1.9ms | Allocations: 763131)
+
+
+  
+NoMethodError (super: no superclass method `authenticate_user!' for #<Api::V1::VotesController:0x0000029d3d658560>
+Did you mean?  authenticate_poll?):
+  
+app/controllers/api/v1/votes_controller.rb:82:in `authenticate_user!'
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 14:37:13 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 652211ms (ActiveRecord: 0.4ms | Allocations: 754111)
+
+
+  
+NoMethodError (super: no superclass method `authenticate_user!' for #<Api::V1::VotesController:0x0000029d3fecb128>
+Did you mean?  authenticate_poll?):
+  
+app/controllers/api/v1/votes_controller.rb:82:in `authenticate_user!'
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 14:48:32 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/votes_controller.rb:22:in `create'
+Completed 422 Unprocessable Entity in 135870ms (Views: 0.2ms | ActiveRecord: 3.4ms | Allocations: 182849)
+
+
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 15:38:08 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "user_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.4ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:70:in `authenticate_poll?'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/votes_controller.rb:22:in `create'
+Completed 422 Unprocessable Entity in 44910ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 158448)
+
+
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 15:42:23 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "choice"=>"2"}, "text/plain"=>[""]}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:62:in `authenticate_poll?'
+Completed 401 Unauthorized in 26ms (ActiveRecord: 2.5ms | Allocations: 12723)
+
+
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 15:43:37 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "choice"=>"2"}, "text/plain"=>[""]}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:62:in `authenticate_poll?'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/votes_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 39ms (Views: 0.1ms | ActiveRecord: 4.0ms | Allocations: 19397)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 16:05:13 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "choice"=>"2"}, "text/plain"=>[""]}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:62:in `authenticate_poll?'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mVote Create (0.6ms)[0m  [1m[32mINSERT INTO "votes" ("poll_id", "choice", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["poll_id", 1], ["choice", "2"], ["created_at", "2022-06-13 19:05:14.221285"], ["updated_at", "2022-06-13 19:05:14.221285"]]
+  ↳ app/controllers/api/v1/votes_controller.rb:21:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/votes_controller.rb:21:in `create'
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 3.6ms | Allocations: 22592)
+
+
+  
+ActiveRecord::NotNullViolation (SQLite3::ConstraintException: NOT NULL constraint failed: votes.user_id):
+  
+app/controllers/api/v1/votes_controller.rb:21:in `create'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeNullableToVote (20220613190910)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "avotes" ("id" integer NOT NULL PRIMARY KEY, "poll_id" integer NOT NULL, "choice" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_avotes_on_user_id" ON "avotes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_avotes_on_poll_id" ON "avotes" ("poll_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "avotes" ("id","poll_id","choice","created_at","updated_at","user_id")
+                     SELECT "id","poll_id","choice","created_at","updated_at","user_id" FROM "votes"[0m
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE "votes"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeNullableToVote (20220613190910)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "avotes" ("id" integer NOT NULL PRIMARY KEY, "poll_id" integer NOT NULL, "choice" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "tindex_avotes_on_user_id" ON "avotes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_avotes_on_poll_id" ON "avotes" ("poll_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "avotes" ("id","poll_id","choice","created_at","updated_at","user_id")
+                     SELECT "id","poll_id","choice","created_at","updated_at","user_id" FROM "votes"[0m
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE "votes"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (8.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserToVote (20220607190628)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "avotes" ("id" integer NOT NULL PRIMARY KEY, "poll_id" integer NOT NULL, "choice" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_avotes_on_user_id" ON "avotes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_avotes_on_poll_id" ON "avotes" ("poll_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "avotes" ("id","poll_id","choice","created_at","updated_at","user_id")
+                     SELECT "id","poll_id","choice","created_at","updated_at","user_id" FROM "votes"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "votes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "votes" ("id" integer NOT NULL PRIMARY KEY, "poll_id" integer NOT NULL, "choice" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer NOT NULL, CONSTRAINT "fk_rails_97f5854c0f"
+FOREIGN KEY ("poll_id")
+  REFERENCES "polls" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_votes_on_poll_id" ON "votes" ("poll_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_votes_on_user_id" ON "votes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "votes" ("id","poll_id","choice","created_at","updated_at","user_id")
+                     SELECT "id","poll_id","choice","created_at","updated_at","user_id" FROM "avotes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "avotes"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "avotes" ("id" integer NOT NULL PRIMARY KEY, "poll_id" integer NOT NULL, "choice" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_avotes_on_user_id" ON "avotes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_avotes_on_poll_id" ON "avotes" ("poll_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "avotes" ("id","poll_id","choice","created_at","updated_at","user_id")
+                     SELECT "id","poll_id","choice","created_at","updated_at","user_id" FROM "votes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "votes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "votes" ("id" integer NOT NULL PRIMARY KEY, "poll_id" integer NOT NULL, "choice" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_97f5854c0f"
+FOREIGN KEY ("poll_id")
+  REFERENCES "polls" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_votes_on_poll_id" ON "votes" ("poll_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "votes" ("id","poll_id","choice","created_at","updated_at")
+                     SELECT "id","poll_id","choice","created_at","updated_at" FROM "avotes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "avotes"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20220607190628"]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserToVote (20220607190628)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "votes" ADD "user_id" integer[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_votes_on_user_id" ON "votes" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "avotes" ("id" integer NOT NULL PRIMARY KEY, "poll_id" integer NOT NULL, "choice" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_avotes_on_user_id" ON "avotes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_avotes_on_poll_id" ON "avotes" ("poll_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "avotes" ("id","poll_id","choice","created_at","updated_at","user_id")
+                     SELECT "id","poll_id","choice","created_at","updated_at","user_id" FROM "votes"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "votes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "votes" ("id" integer NOT NULL PRIMARY KEY, "poll_id" integer NOT NULL, "choice" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer DEFAULT NULL, CONSTRAINT "fk_rails_97f5854c0f"
+FOREIGN KEY ("poll_id")
+  REFERENCES "polls" ("id")
+, CONSTRAINT "fk_rails_c9b3bef597"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_votes_on_poll_id" ON "votes" ("poll_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_votes_on_user_id" ON "votes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "votes" ("id","poll_id","choice","created_at","updated_at","user_id")
+                     SELECT "id","poll_id","choice","created_at","updated_at","user_id" FROM "avotes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "avotes"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220607190628"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 16:14:11 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:62:in `authenticate_poll?'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mPoll Load (0.5ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mVote Create (1.4ms)[0m  [1m[32mINSERT INTO "votes" ("poll_id", "choice", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["poll_id", 1], ["choice", "2"], ["created_at", "2022-06-13 19:14:11.621613"], ["updated_at", "2022-06-13 19:14:11.621613"]]
+  ↳ app/controllers/api/v1/votes_controller.rb:21:in `create'
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/votes_controller.rb:21:in `create'
+Completed 201 Created in 93ms (Views: 0.9ms | ActiveRecord: 11.8ms | Allocations: 22615)
+
+
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 16:14:27 -0300
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:62:in `authenticate_poll?'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mVote Create (1.4ms)[0m  [1m[32mINSERT INTO "votes" ("poll_id", "choice", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["poll_id", 1], ["choice", "2"], ["created_at", "2022-06-13 19:14:27.563153"], ["updated_at", "2022-06-13 19:14:27.563153"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:21:in `create'
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/votes_controller.rb:21:in `create'
+Completed 201 Created in 26ms (Views: 0.8ms | ActiveRecord: 7.4ms | Allocations: 5165)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoll Update (15.2ms)[0m  [1m[33mUPDATE "polls" SET "updated_at" = ?, "authenticate" = ? WHERE "polls"."id" = ?[0m  [["updated_at", "2022-06-13 19:15:30.852607"], ["authenticate", 1], ["id", 1]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 16:15:38 -0300
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:62:in `authenticate_poll?'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mVote Create (1.5ms)[0m  [1m[32mINSERT INTO "votes" ("poll_id", "choice", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["poll_id", 1], ["choice", "2"], ["created_at", "2022-06-13 19:15:38.339330"], ["updated_at", "2022-06-13 19:15:38.339330"]]
+  ↳ app/controllers/api/v1/votes_controller.rb:21:in `create'
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/votes_controller.rb:21:in `create'
+Completed 201 Created in 33ms (Views: 1.8ms | ActiveRecord: 14.5ms | Allocations: 5163)
+
+
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 16:16:32 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:62:in `authenticate_poll?'
+Completed 401 Unauthorized in 54ms (ActiveRecord: 2.3ms | Allocations: 14496)
+
+
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 16:16:42 -0300
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:62:in `authenticate_poll?'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mVote Create (2.1ms)[0m  [1m[32mINSERT INTO "votes" ("poll_id", "choice", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["poll_id", 1], ["choice", "2"], ["created_at", "2022-06-13 19:16:42.957506"], ["updated_at", "2022-06-13 19:16:42.957506"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:21:in `create'
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/votes_controller.rb:21:in `create'
+Completed 201 Created in 40ms (Views: 1.8ms | ActiveRecord: 11.7ms | Allocations: 10759)
+
+
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" ORDER BY "votes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPoll Update (4.0ms)[0m  [1m[33mUPDATE "polls" SET "updated_at" = ?, "authenticate" = ? WHERE "polls"."id" = ?[0m  [["updated_at", "2022-06-13 19:21:17.407996"], ["authenticate", 0], ["id", 1]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" ORDER BY "votes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Update (1.5ms)[0m  [1m[33mUPDATE "votes" SET "updated_at" = ?, "user_id" = ? WHERE "votes"."id" = ?[0m  [["updated_at", "2022-06-13 19:26:07.905393"], ["user_id", nil], ["id", 13]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+Started PUT "/api/v1/polls/13" for ::1 at 2022-06-13 16:26:37 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::PollsController#update as */*
+  Parameters: {"poll"=>{"choice"=>"3"}, "id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:47:in `set_poll'
+Completed 404 Not Found in 48ms (ActiveRecord: 3.6ms | Allocations: 10775)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Poll with 'id'=13):
+  
+app/controllers/api/v1/polls_controller.rb:47:in `set_poll'
+Started PUT "/api/v1/votes/13" for ::1 at 2022-06-13 16:26:47 -0300
+Processing by Api::V1::VotesController#update as */*
+  Parameters: {"poll"=>{"choice"=>"3"}, "id"=>"13"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.3ms | Allocations: 1559)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: vote):
+  
+app/controllers/api/v1/votes_controller.rb:51:in `vote_params'
+app/controllers/api/v1/votes_controller.rb:62:in `authenticate_poll?'
+app/controllers/api/v1/votes_controller.rb:68:in `authenticate_user!'
+Started PUT "/api/v1/votes/13" for ::1 at 2022-06-13 16:26:57 -0300
+Processing by Api::V1::VotesController#update as */*
+  Parameters: {"vote"=>{"choice"=>"3"}, "id"=>"13"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 0.3ms | Allocations: 69257)
+
+
+  
+NameError (undefined local variable or method `vote' for #<Api::V1::VotesController:0x000001fa04ad2e60>):
+  
+app/controllers/api/v1/votes_controller.rb:46:in `set_vote'
+Started PUT "/api/v1/votes/13" for ::1 at 2022-06-13 16:27:27 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::VotesController#update as */*
+  Parameters: {"vote"=>{"choice"=>"3"}, "id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:46:in `set_vote'
+Filter chain halted as :require_authorization! rendered or redirected
+Completed 403 Forbidden in 29ms (Views: 0.1ms | ActiveRecord: 2.4ms | Allocations: 12459)
+
+
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVote Update (16.2ms)[0m  [1m[33mUPDATE "votes" SET "updated_at" = ?, "user_id" = ? WHERE "votes"."id" = ?[0m  [["updated_at", "2022-06-13 19:27:43.055091"], ["user_id", 1], ["id", 13]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+Started PUT "/api/v1/votes/13" for ::1 at 2022-06-13 16:27:47 -0300
+Processing by Api::V1::VotesController#update as */*
+  Parameters: {"vote"=>{"choice"=>"3"}, "id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:46:in `set_vote'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:55:in `require_authorization!'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mVote Update (1.2ms)[0m  [1m[33mUPDATE "votes" SET "choice" = ?, "updated_at" = ? WHERE "votes"."id" = ?[0m  [["choice", "3"], ["updated_at", "2022-06-13 19:27:47.599172"], ["id", 13]]
+  ↳ app/controllers/api/v1/votes_controller.rb:30:in `update'
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/votes_controller.rb:30:in `update'
+Completed 200 OK in 68ms (Views: 0.6ms | ActiveRecord: 7.9ms | Allocations: 12121)
+
+
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVote Update (2.9ms)[0m  [1m[33mUPDATE "votes" SET "updated_at" = ?, "user_id" = ? WHERE "votes"."id" = ?[0m  [["updated_at", "2022-06-13 19:33:14.389364"], ["user_id", nil], ["id", 13]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+Started DELETE "/api/v1/votes/13" for ::1 at 2022-06-13 16:33:17 -0300
+Processing by Api::V1::VotesController#destroy as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.2ms | Allocations: 1497)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: vote):
+  
+app/controllers/api/v1/votes_controller.rb:51:in `vote_params'
+app/controllers/api/v1/votes_controller.rb:62:in `authenticate_poll?'
+app/controllers/api/v1/votes_controller.rb:68:in `authenticate_user!'
+Started DELETE "/api/v1/votes/13" for ::1 at 2022-06-13 16:40:51 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::VotesController#destroy as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:46:in `set_vote'
+Filter chain halted as :require_authorization! rendered or redirected
+Completed 403 Forbidden in 22ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 10745)
+
+
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVote Update (1.4ms)[0m  [1m[33mUPDATE "votes" SET "updated_at" = ?, "user_id" = ? WHERE "votes"."id" = ?[0m  [["updated_at", "2022-06-13 19:41:11.016441"], ["user_id", 1], ["id", 13]]
+  [1m[35m (10.9ms)[0m  [1m[36mcommit transaction[0m
+Started DELETE "/api/v1/votes/13" for ::1 at 2022-06-13 16:41:18 -0300
+Processing by Api::V1::VotesController#destroy as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:46:in `set_vote'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:55:in `require_authorization!'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/votes_controller.rb:39:in `destroy'
+  [1m[36mVote Destroy (1.4ms)[0m  [1m[31mDELETE FROM "votes" WHERE "votes"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/api/v1/votes_controller.rb:39:in `destroy'
+  [1m[35m (11.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/votes_controller.rb:39:in `destroy'
+Completed 204 No Content in 29ms (ActiveRecord: 14.2ms | Allocations: 4720)
+
+
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" ORDER BY "votes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started PUT "/api/v1/votes/12" for ::1 at 2022-06-13 16:41:54 -0300
+Processing by Api::V1::VotesController#update as */*
+  Parameters: {"vote"=>{"choice"=>"3"}, "id"=>"12"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:46:in `set_vote'
+Filter chain halted as :require_authorization! rendered or redirected
+Completed 403 Forbidden in 8ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 2046)
+
+
+Started PUT "/api/v1/votes/11" for ::1 at 2022-06-13 16:42:07 -0300
+Processing by Api::V1::VotesController#update as */*
+  Parameters: {"vote"=>{"choice"=>"3"}, "id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:46:in `set_vote'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:55:in `require_authorization!'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mVote Update (1.0ms)[0m  [1m[33mUPDATE "votes" SET "choice" = ?, "updated_at" = ? WHERE "votes"."id" = ?[0m  [["choice", "3"], ["updated_at", "2022-06-13 19:42:07.826444"], ["id", 11]]
+  ↳ app/controllers/api/v1/votes_controller.rb:30:in `update'
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/votes_controller.rb:30:in `update'
+Completed 200 OK in 126ms (Views: 0.7ms | ActiveRecord: 8.1ms | Allocations: 13271)
+
+
+Started POST "/api/v1/votes.json" for ::1 at 2022-06-13 16:42:13 -0300
+Processing by Api::V1::VotesController#create as JSON
+  Parameters: {"vote"=>{"poll_id"=>"1", "choice"=>"2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/concerns/choice_validable.rb:11:in `validate_choice'
+  [1m[36mVote Create (15.6ms)[0m  [1m[32mINSERT INTO "votes" ("poll_id", "choice", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["poll_id", 1], ["choice", "2"], ["created_at", "2022-06-13 19:42:13.774274"], ["updated_at", "2022-06-13 19:42:13.774274"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/votes_controller.rb:21:in `create'
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/votes_controller.rb:21:in `create'
+Completed 201 Created in 40ms (Views: 0.8ms | ActiveRecord: 21.5ms | Allocations: 4595)
+
+
