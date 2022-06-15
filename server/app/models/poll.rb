@@ -12,6 +12,10 @@ class Poll < ApplicationRecord
   def choices
     JSON.parse self[:choices]
   end
+
+  def as_json_with_votes
+    self.as_json.merge(votes: self.votes.all.to_a)
+  end
 end
 
 # Poll.create!(title: 'title', description: 'description', user: User.last)

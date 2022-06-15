@@ -7,7 +7,7 @@ class Api::V1::PollsController < Api::V1::ApiController
     def index
         @polls = current_user.polls
 
-        render json: @polls
+        render json: @polls.map { |poll| poll.as_json_with_votes }
     end
 
     # GET /api/v1/polls/1
