@@ -56,6 +56,7 @@ class Api::V1::PollsController < Api::V1::ApiController
     end
 
     def require_authorization!
+        binding.pry
         unless current_user == @poll.user
             render json: { error: "User need to be the owner to edit or delete a Poll" }, status: :unauthorized
         end

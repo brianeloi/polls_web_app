@@ -1,0 +1,28 @@
+html {
+    height: 100%;
+}
+body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#fullscreen {
+    height: 100%;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+.fa {
+    color: #b1b1b1;
+}
+
+.pattern_button {
+    background-color: #263F8C;
+    border: 0;
+    border-radius: 3vw;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
