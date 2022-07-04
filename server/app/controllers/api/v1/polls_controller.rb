@@ -49,14 +49,13 @@ class Api::V1::PollsController < Api::V1::ApiController
 
     # Only allow a trusted parameter "white list" through.
     def poll_params
-        parameters = params.require(:poll).permit(:title, :description, :choices)
+        parameters = params.require(:poll).permit(:title, :description, :choices, :authenticate)
         parameters[:choices] = JSON.parse parameters[:choices]
         
         parameters
     end
 
     def require_authorization!
-        binding.pry
         unless current_user == @poll.user
             render json: { error: "User need to be the owner to edit or delete a Poll" }, status: :unauthorized
         end

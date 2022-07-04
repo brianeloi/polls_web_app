@@ -1,14 +1,35 @@
 import { getUserPolls } from '../modules/api_requests.js'
+import { addPollForm } from '../js/add_poll_form.js'
 
 export const userPollsPage = () => {
-    const polls = getUserPolls({ user_email: 'usermail@mail.com', user_token: 'YVBNcNLSpReeudbvri8B' })
-    //console.log(polls)
+    const polls_div_id = 'polls_container'
+    const user_email = 'usermail@mail.com'
+    const user_token = 'YVBNcNLSpReeudbvri8B'
 
-    let polls_list =    '<header id="header" class="header">' + 
-                            '<div id=header_text class="header_text">' +
-                                'Polls' +
-                            '</div>' +
-                        '</header>'
+    const render_polls_hook = (polls, div_id) => {
+        let polls_html_list = ''
 
-    return polls_list
+        polls.forEach(poll => {
+            polls_html_list += `<div>${poll.title} - ${poll.description}</div>`
+        });
+
+        const polls_listener = setInterval(function () {
+            const element = document.getElementById(div_id)
+            if(element) {
+                element.innerHTML += polls_html_list
+                clearInterval(polls_listener)
+            }
+        }, 50);
+    }
+
+    const polls = getUserPolls({ user_email,
+                                 user_token,
+                                 render_polls_hook,
+                                 polls_div_id })
+
+    let add_poll_form = addPollForm({ user_email, user_token })
+    let polls_list =    `<div id="${polls_div_id}" class="${polls_div_id}">` +
+                        '</div>'
+
+    return add_poll_form + polls_list
 }

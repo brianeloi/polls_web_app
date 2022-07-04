@@ -2330,3 +2330,697 @@ Processing by Api::V1::PollsController#index as JSON
 Completed 200 OK in 36ms (Views: 3.3ms | ActiveRecord: 2.3ms | Allocations: 8923)
 
 
+Started GET "/" for ::1 at 2022-06-30 14:05:52 -0300
+  [1m[35m (8.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/railties-6.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/railties-6.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 36.7ms | Allocations: 302)
+Completed 200 OK in 129ms (Views: 69.4ms | ActiveRecord: 0.0ms | Allocations: 2480)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-06-30 14:06:21 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 203ms (Views: 4.2ms | ActiveRecord: 5.3ms | Allocations: 27048)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-06-30 14:14:46 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.7ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 32ms (Views: 4.7ms | ActiveRecord: 2.1ms | Allocations: 8938)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-06-30 14:30:57 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.5ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 27ms (Views: 3.4ms | ActiveRecord: 1.9ms | Allocations: 8935)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-06-30 14:31:22 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 27ms (Views: 3.3ms | ActiveRecord: 1.8ms | Allocations: 8875)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-06-30 14:34:47 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 29ms (Views: 3.9ms | ActiveRecord: 1.6ms | Allocations: 8855)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-06-30 15:10:03 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 31ms (Views: 3.7ms | ActiveRecord: 1.8ms | Allocations: 8921)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-06-30 15:28:28 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.4ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 29ms (Views: 6.0ms | ActiveRecord: 1.9ms | Allocations: 8921)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-06-30 15:30:47 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 27ms (Views: 6.9ms | ActiveRecord: 1.5ms | Allocations: 8855)
+
+
+Started POST "/api/v1/polls.json?poll=%7B%22title%22:%22Poll+create+test%22,%22description%22:%22Poll+test+description%22,%22choices%22:[%22x%22,%22y%22,%22z%22]%7D" for ::1 at 2022-06-30 15:31:11 -0300
+Started GET "/api/v1/polls.json" for ::1 at 2022-06-30 15:31:11 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 28ms (Views: 3.1ms | ActiveRecord: 1.5ms | Allocations: 8955)
+
+
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>"{\"title\":\"Poll create test\",\"description\":\"Poll test description\",\"choices\":[\"x\",\"y\",\"z\"]}"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 171)
+
+
+Started POST "/api/v1/polls.json?poll=%7B%22title%22:%22Poll+create+test%22,%22description%22:%22Poll+test+description%22,%22choices%22:[%22x%22,%22y%22,%22z%22]%7D" for ::1 at 2022-06-30 15:32:20 -0300
+Started GET "/api/v1/polls.json" for ::1 at 2022-06-30 15:32:20 -0300
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>"{\"title\":\"Poll create test\",\"description\":\"Poll test description\",\"choices\":[\"x\",\"y\",\"z\"]}"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms | Allocations: 157)
+
+
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.4ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 35ms (Views: 7.1ms | ActiveRecord: 2.4ms | Allocations: 8855)
+
+
+Started POST "/api/v1/polls.json" for ::1 at 2022-06-30 19:45:16 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Titulo de Poll 3", "description"=>"Descrição para Poll 3", "choices"=>"[\"a\",\"b\",\"c\"]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:22:in `create'
+  [1m[36mPoll Create (1.5ms)[0m  [1m[32mINSERT INTO "polls" ("title", "description", "user_id", "created_at", "updated_at", "choices") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Titulo de Poll 3"], ["description", "Descrição para Poll 3"], ["user_id", 1], ["created_at", "2022-06-30 22:45:16.701535"], ["updated_at", "2022-06-30 22:45:16.701535"], ["choices", "[\"a\", \"b\", \"c\"]"]]
+  ↳ app/controllers/api/v1/polls_controller.rb:22:in `create'
+  [1m[35m (11.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:22:in `create'
+Completed 201 Created in 59ms (Views: 1.0ms | ActiveRecord: 13.8ms | Allocations: 4746)
+
+
+Started POST "/api/v1/polls.json" for ::1 at 2022-06-30 19:55:50 -0300
+Started GET "/api/v1/polls.json" for ::1 at 2022-06-30 19:55:50 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Poll create test", "description"=>"Poll test description", "choices"=>["x", "y", "z"]}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms | Allocations: 164)
+
+
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.6ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 40ms (Views: 5.6ms | ActiveRecord: 2.8ms | Allocations: 9875)
+
+
+Started POST "/api/v1/polls.json" for ::1 at 2022-06-30 20:00:31 -0300
+Started GET "/api/v1/polls.json" for ::1 at 2022-06-30 20:00:32 -0300
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Poll create test", "description"=>"Poll test description", "choices"=>["x", "y", "z"]}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+[31mUnpermitted parameter: :choices[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms | Allocations: 1631)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/api/v1/polls_controller.rb:53:in `poll_params'
+app/controllers/api/v1/polls_controller.rb:20:in `create'
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.5ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 48ms (Views: 6.5ms | ActiveRecord: 3.1ms | Allocations: 9809)
+
+
+Started POST "/api/v1/polls.json" for ::1 at 2022-06-30 20:03:43 -0300
+Started GET "/api/v1/polls.json" for ::1 at 2022-06-30 20:03:43 -0300
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Poll create test", "description"=>"Poll test description", "choices"=>["x", "y", "z"]}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms | Allocations: 164)
+
+
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 36ms (Views: 3.5ms | ActiveRecord: 2.1ms | Allocations: 9809)
+
+
+Started POST "/api/v1/polls.json" for ::1 at 2022-06-30 20:04:10 -0300
+Started GET "/api/v1/polls.json" for ::1 at 2022-06-30 20:04:10 -0300
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Poll create test", "description"=>"Poll test description", "choices"=>["x", "y", "z"]}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 166)
+
+
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.4ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 39ms (Views: 4.5ms | ActiveRecord: 2.5ms | Allocations: 9812)
+
+
+Started POST "/api/v1/polls.json" for ::1 at 2022-06-30 20:06:47 -0300
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Titulo de Poll 4", "description"=>"Descrição para Poll 4", "choices"=>"[\"a\",\"b\",\"c\"]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:22:in `create'
+  [1m[36mPoll Create (15.9ms)[0m  [1m[32mINSERT INTO "polls" ("title", "description", "user_id", "created_at", "updated_at", "choices") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Titulo de Poll 4"], ["description", "Descrição para Poll 4"], ["user_id", 1], ["created_at", "2022-06-30 23:06:47.779433"], ["updated_at", "2022-06-30 23:06:47.779433"], ["choices", "[\"a\", \"b\", \"c\"]"]]
+  ↳ app/controllers/api/v1/polls_controller.rb:22:in `create'
+  [1m[35m (11.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:22:in `create'
+Completed 201 Created in 42ms (Views: 1.3ms | ActiveRecord: 28.0ms | Allocations: 4121)
+
+
+Started POST "/api/v1/polls.json" for ::1 at 2022-06-30 20:09:20 -0300
+Started GET "/api/v1/polls.json" for ::1 at 2022-06-30 20:09:20 -0300
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Poll create test", "description"=>"Poll test description", "choices"=>"[\"x\",\"y\",\"z\"]"}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms | Allocations: 163)
+
+
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 37ms (Views: 3.5ms | ActiveRecord: 2.7ms | Allocations: 10761)
+
+
+Started POST "/api/v1/polls.json" for ::1 at 2022-06-30 20:12:52 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Titulo de Poll 4", "description"=>"Descrição para Poll 4", "choices"=>"[\"a\",\"b\",\"c\"]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:22:in `create'
+  [1m[36mPoll Create (1.9ms)[0m  [1m[32mINSERT INTO "polls" ("title", "description", "user_id", "created_at", "updated_at", "choices") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Titulo de Poll 4"], ["description", "Descrição para Poll 4"], ["user_id", 1], ["created_at", "2022-06-30 23:12:53.015567"], ["updated_at", "2022-06-30 23:12:53.015567"], ["choices", "[\"a\", \"b\", \"c\"]"]]
+  ↳ app/controllers/api/v1/polls_controller.rb:22:in `create'
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:22:in `create'
+Completed 201 Created in 41ms (Views: 0.6ms | ActiveRecord: 9.4ms | Allocations: 15291)
+
+
+Started POST "/api/v1/polls.json" for ::1 at 2022-06-30 20:13:30 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Titulo de Poll 4", "description"=>"Descrição para Poll 4", "choices"=>"[\"a\",\"b\",\"c\"]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Started POST "/api/v1/polls.json" for ::1 at 2022-06-30 20:14:28 -0300
+Started GET "/api/v1/polls.json" for ::1 at 2022-06-30 20:14:28 -0300
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:22:in `create'
+  [1m[36mPoll Create (1.7ms)[0m  [1m[32mINSERT INTO "polls" ("title", "description", "user_id", "created_at", "updated_at", "choices") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Titulo de Poll 4"], ["description", "Descrição para Poll 4"], ["user_id", 1], ["created_at", "2022-06-30 23:14:51.527764"], ["updated_at", "2022-06-30 23:14:51.527764"], ["choices", "[\"a\", \"b\", \"c\"]"]]
+  ↳ app/controllers/api/v1/polls_controller.rb:22:in `create'
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:22:in `create'
+Completed 201 Created in 80966ms (Views: 1.3ms | ActiveRecord: 9.1ms | Allocations: 100485)
+
+
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Poll create test", "description"=>"Poll test description", "choices"=>"[\"x\",\"y\",\"z\"]"}}
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Started POST "/api/v1/polls.json" for ::1 at 2022-06-30 20:25:38 -0300
+Started GET "/api/v1/polls.json" for ::1 at 2022-06-30 20:25:38 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"method"=>"POST", "headers"=>{}, "body"=>{}, "redirect"=>"follow", "poll"=>{}}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-01 12:02:49 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.4ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 9712ms (Views: 4.3ms | ActiveRecord: 4.0ms | Allocations: 43506)
+
+
+Started POST "/api/v1/polls.json" for ::1 at 2022-07-01 12:02:59 -0300
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Titulo de Poll 4", "description"=>"Descrição para Poll 4", "choices"=>"[\"a\",\"b\",\"c\"]"}}
+Completed 401 Unauthorized in 9742ms (ActiveRecord: 0.0ms | Allocations: 29024)
+
+
+  [1m[36mPoll Load (1.5ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.7ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 56692080ms (Views: 5.9ms | ActiveRecord: 4.2ms | Allocations: 5684388)
+
+
+Completed 401 Unauthorized in 56708799ms (ActiveRecord: 0.6ms | Allocations: 5729007)
+
+
+Started POST "/api/v1/polls.json" for ::1 at 2022-07-01 12:11:12 -0300
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-01 12:11:12 -0300
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Titulo de Poll 4", "description"=>"Descrição para Poll 4", "choices"=>"[\"a\",\"b\",\"c\"]"}}
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.4ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 41667ms (Views: 6.0ms | ActiveRecord: 2.4ms | Allocations: 52788)
+
+
+Completed 401 Unauthorized in 165486ms (ActiveRecord: 0.0ms | Allocations: 519679)
+
+
+  [1m[36mPoll Load (0.9ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 57578660ms (Views: 3.6ms | ActiveRecord: 3.8ms | Allocations: 6957666)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-01 12:18:47 -0300
+Started POST "/api/v1/polls.json" for ::1 at 2022-07-01 12:18:47 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Titulo de Poll 123", "description"=>"Descrição para Poll 123", "choices"=>"[\"l\",\"m\",\"n\"]"}}
+Completed 401 Unauthorized in 14020ms (ActiveRecord: 0.0ms | Allocations: 30332)
+
+
+Started POST "/api/v1/polls.json" for ::1 at 2022-07-01 12:20:06 -0300
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-01 12:20:06 -0300
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Titulo de Poll 123", "description"=>"Descrição para Poll 123", "choices"=>"[\"l\",\"m\",\"n\"]"}, "X-User-Email"=>"usermail@mail.com", "X-User-Token"=>"YVBNcNLSpReeudbvri8B"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.7ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 15317ms (Views: 5.4ms | ActiveRecord: 2.7ms | Allocations: 57368)
+
+
+Completed 401 Unauthorized in 24545ms (ActiveRecord: 0.0ms | Allocations: 95644)
+
+
+  [1m[36mPoll Load (0.5ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 109141ms (Views: 3.4ms | ActiveRecord: 2.2ms | Allocations: 183864)
+
+
+Completed 401 Unauthorized in 57944888ms (ActiveRecord: 0.0ms | Allocations: 7242880)
+
+
+Started POST "/api/v1/polls.json" for ::1 at 2022-07-01 12:21:12 -0300
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-01 12:21:12 -0300
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"Titulo de Poll 123", "description"=>"Descrição para Poll 123", "choices"=>"[\"l\",\"m\",\"n\"]"}, "user_email"=>"usermail@mail.com", "user_token"=>"YVBNcNLSpReeudbvri8B"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.4ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 13427ms (Views: 5.2ms | ActiveRecord: 2.2ms | Allocations: 43776)
+
+
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:22:in `create'
+  [1m[36mPoll Create (16.2ms)[0m  [1m[32mINSERT INTO "polls" ("title", "description", "user_id", "created_at", "updated_at", "choices") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Titulo de Poll 123"], ["description", "Descrição para Poll 123"], ["user_id", 1], ["created_at", "2022-07-01 15:21:34.221318"], ["updated_at", "2022-07-01 15:21:34.221318"], ["choices", "[\"l\", \"m\", \"n\"]"]]
+  ↳ app/controllers/api/v1/polls_controller.rb:22:in `create'
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:22:in `create'
+Completed 201 Created in 21973ms (Views: 0.9ms | ActiveRecord: 22.0ms | Allocations: 78492)
+
+
+Started GET "/api/v1/contacts.json" for ::1 at 2022-07-01 15:49:44 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/contacts.json"):
+  
+actionpack (6.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-01 15:50:46 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (1.0ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 11]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 9886ms (Views: 12.0ms | ActiveRecord: 6.5ms | Allocations: 30897)
+
+
