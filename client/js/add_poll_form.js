@@ -7,7 +7,7 @@ export const addPollForm = ({ user_email, user_token }) => {
         const choices_elements = document.getElementsByClassName('choices_inputs')
         let choices_values = []
         for(let i = 0; i < choices_elements.length; i++){
-            choices_values[i] = choices_elements[i].value
+            choices_elements[i].value && choices_values.push(choices_elements[i].value)
         }
 
         return JSON.stringify(choices_values)
