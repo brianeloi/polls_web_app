@@ -19,7 +19,7 @@ export const userPollsPage = () => {
                 element.innerHTML += polls_html_list
                 clearInterval(polls_listener)
             }
-        }, 50);
+        }, 50);  // avoid infinite interval with that: sec = new Date().getTime()/1000
     }
 
     const polls = getUserPolls({ user_email,
