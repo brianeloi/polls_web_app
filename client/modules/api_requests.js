@@ -1,7 +1,4 @@
-export const getUserPolls = ({ user_email, user_token, render_polls_hook, polls_div_id }) => {
-    axios.defaults.headers.get['X-User-Email'] = user_email
-    axios.defaults.headers.get['X-User-Token'] = user_token
-
+export const getUserPolls = ({ user_email, user_token, render_polls_hook, polls_div_id }) => { //INDEX
     async function doGetRequest() {
         let res = await axios.get(`http://localhost:3000/api/v1/polls.json`)
 
@@ -14,10 +11,7 @@ export const getUserPolls = ({ user_email, user_token, render_polls_hook, polls_
     return doGetRequest()
 }
 
-export const getPoll = ({ user_email, user_token, poll_id, render_hook, div_id }) => {
-    axios.defaults.headers.get['X-User-Email'] = user_email
-    axios.defaults.headers.get['X-User-Token'] = user_token
-
+export const getPoll = ({ user_email, user_token, poll_id, render_hook, div_id }) => { // SHOW
     async function doGetRequest() {
         let res = await axios.get(`http://localhost:3000/api/v1/polls/${poll_id}`)
 
@@ -30,10 +24,7 @@ export const getPoll = ({ user_email, user_token, poll_id, render_hook, div_id }
     return doGetRequest()
 }
 
-export const createPoll = ({ user_email, user_token, title, description, choices, authenticate }) => {
-    axios.defaults.headers.post['X-User-Email'] = user_email
-    axios.defaults.headers.post['X-User-Token'] = user_token
-    
+export const createPoll = ({ user_email, user_token, title, description, choices, authenticate }) => { // CREATE    
     var formdata = new FormData();
     formdata.append("poll[title]", title);
     formdata.append("poll[description]", description);

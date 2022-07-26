@@ -4,7 +4,7 @@ export const getUrlParams = (keys = []) => {
     let params_hash = {}
 
     keys.forEach(key => {
-        params_hash[key] = url_params.get('caruru') // => 'vatapa'
+        params_hash[key] = url_params.get(key) // => 'vatapa'
     });
 
     return params_hash

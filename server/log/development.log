@@ -4875,3 +4875,1533 @@ Processing by Api::V1::PollsController#create as JSON
 Completed 201 Created in 27ms (Views: 1.2ms | ActiveRecord: 12.7ms | Allocations: 4078)
 
 
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-05 14:06:34 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#index as JSON
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.0ms | Allocations: 172)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-05 14:07:56 -0300
+Processing by Api::V1::PollsController#index as JSON
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms | Allocations: 156)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-05 14:09:27 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.6ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 11]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 12]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 13]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 14]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 15]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 16]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 17]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 18]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 19]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 20]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 21]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 22]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 23]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 24]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 25]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 26]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 27]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 28]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 29]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 88ms (Views: 4.4ms | ActiveRecord: 5.5ms | Allocations: 30799)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-05 14:10:51 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 11]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 12]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 13]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 14]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 15]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 16]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 17]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 18]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 19]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 20]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 21]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 22]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 23]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 24]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 25]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 26]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 27]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 28]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 29]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 82ms (Views: 4.0ms | ActiveRecord: 5.2ms | Allocations: 30731)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-05 14:10:54 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 11]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 12]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 13]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 14]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 15]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 16]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 17]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 18]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 19]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 20]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 21]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 22]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 23]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 24]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 25]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 26]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 27]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 28]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 29]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 75ms (Views: 4.3ms | ActiveRecord: 4.9ms | Allocations: 30734)
+
+
+Started POST "/api/v1/polls.json" for ::1 at 2022-07-05 14:11:25 -0300
+Processing by Api::V1::PollsController#create as JSON
+  Parameters: {"poll"=>{"title"=>"title 14", "description"=>"desc 14", "choices"=>"[\"df\",\"asd\"]", "authenticate"=>"false"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:22:in `create'
+  [1m[36mPoll Create (1.4ms)[0m  [1m[32mINSERT INTO "polls" ("title", "description", "user_id", "created_at", "updated_at", "choices", "authenticate") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "title 14"], ["description", "desc 14"], ["user_id", 1], ["created_at", "2022-07-05 17:11:26.052978"], ["updated_at", "2022-07-05 17:11:26.052978"], ["choices", "[\"df\", \"asd\"]"], ["authenticate", 0]]
+  ↳ app/controllers/api/v1/polls_controller.rb:22:in `create'
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/polls_controller.rb:22:in `create'
+Completed 201 Created in 21ms (Views: 1.6ms | ActiveRecord: 7.5ms | Allocations: 4138)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-05 14:13:15 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 11]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 12]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 13]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 14]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 15]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 16]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 17]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 18]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 19]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 20]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 21]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 22]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 23]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 24]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 25]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 26]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 27]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 28]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 29]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 30]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 82ms (Views: 4.7ms | ActiveRecord: 5.4ms | Allocations: 31679)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-05 14:13:28 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.4ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 11]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 12]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 13]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 14]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 15]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 16]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 17]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 18]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 19]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 20]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 21]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 22]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 23]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 24]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 25]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 26]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 27]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 28]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 29]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 30]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 103ms (Views: 5.1ms | ActiveRecord: 6.9ms | Allocations: 31682)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-05 14:13:39 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 11]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 12]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 13]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 14]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 15]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 16]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 17]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 18]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 19]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 20]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 21]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 22]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 23]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 24]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 25]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 26]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 27]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 28]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 29]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 30]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 75ms (Views: 4.4ms | ActiveRecord: 4.8ms | Allocations: 31678)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-05 14:25:26 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.8ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 11]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 12]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 13]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 14]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 15]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 16]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 17]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 18]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 19]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 20]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 21]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 22]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 23]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 24]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 25]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 26]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 27]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 28]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 29]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 30]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 90ms (Views: 6.9ms | ActiveRecord: 6.7ms | Allocations: 31748)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-05 14:27:59 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.4ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 11]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 12]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 13]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 14]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 15]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 16]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 17]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 18]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 19]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 20]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 21]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 22]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 23]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 24]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 25]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 26]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 27]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 28]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 29]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 30]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 215ms (Views: 86.3ms | ActiveRecord: 5.8ms | Allocations: 31680)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-05 14:29:28 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 11]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 12]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 13]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 14]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 15]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 16]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 17]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 18]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 19]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 20]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 21]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 22]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 23]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 24]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 25]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 26]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 27]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 28]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 29]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 30]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 158ms (Views: 5.6ms | ActiveRecord: 7.5ms | Allocations: 31679)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-05 14:29:44 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 11]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 12]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 13]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 14]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 15]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 16]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 17]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 18]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 19]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 20]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 21]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 22]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 23]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 24]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 25]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 26]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 27]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 28]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 29]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 30]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 88ms (Views: 4.4ms | ActiveRecord: 5.0ms | Allocations: 31680)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-05 14:31:43 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.7ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 11]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 12]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 13]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 14]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 15]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 16]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 17]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 18]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 19]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 20]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 21]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 22]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 23]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 24]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 25]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 26]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 27]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 28]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 29]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 30]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 107ms (Views: 4.5ms | ActiveRecord: 7.1ms | Allocations: 31679)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-05 14:33:39 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.6ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 11]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 12]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 13]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 14]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 15]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 16]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 17]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 18]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 19]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 20]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 21]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 22]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 23]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.7ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 24]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 25]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 26]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 27]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 28]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 29]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 30]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 141ms (Views: 7.7ms | ActiveRecord: 9.7ms | Allocations: 31678)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-05 14:35:32 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.4ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 11]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 12]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 13]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 14]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 15]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 16]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 17]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 18]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 19]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 20]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 21]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 22]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 23]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 24]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.7ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 25]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 26]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 27]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 28]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 29]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 30]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 143ms (Views: 5.7ms | ActiveRecord: 9.5ms | Allocations: 31680)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-05 14:36:08 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (1.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 11]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 12]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 13]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 14]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 15]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 16]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 17]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 18]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 19]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 20]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 21]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 22]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 23]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 24]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 25]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 26]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 27]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 28]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 29]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 30]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 147ms (Views: 4.2ms | ActiveRecord: 12.2ms | Allocations: 31684)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-05 14:37:14 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.4ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 11]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 12]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 13]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 14]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 15]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 16]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 17]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 18]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 19]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 20]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 21]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 22]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 23]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 24]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 25]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 26]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 27]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 28]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 29]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 30]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 83ms (Views: 3.7ms | ActiveRecord: 5.7ms | Allocations: 31678)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-05 14:37:17 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.4ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 11]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 12]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 13]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 14]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 15]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 16]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 17]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 18]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 19]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 20]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 21]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 22]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 23]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 24]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 25]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 26]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 27]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 28]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 29]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 30]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 71ms (Views: 4.9ms | ActiveRecord: 4.9ms | Allocations: 31680)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-05 15:16:17 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 11]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 12]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 13]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 14]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 15]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 16]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 17]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 18]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 19]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 20]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 21]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 22]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 23]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 24]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 25]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 26]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 27]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 28]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 29]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 30]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 75ms (Views: 4.7ms | ActiveRecord: 5.3ms | Allocations: 31744)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-05 15:16:24 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 11]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 12]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 13]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 14]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 15]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 16]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 17]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 18]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 19]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 20]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 21]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 22]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 23]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 24]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 25]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 26]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 27]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 28]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 29]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 30]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 74ms (Views: 3.8ms | ActiveRecord: 4.9ms | Allocations: 31678)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-05 15:16:35 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 11]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 12]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 13]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 14]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 15]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 16]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 17]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 18]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 19]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 20]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 21]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 22]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 23]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 24]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 25]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 26]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 27]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 28]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 29]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 30]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 78ms (Views: 4.2ms | ActiveRecord: 5.7ms | Allocations: 31682)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-05 15:35:22 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 11]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 12]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 13]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 14]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 15]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 16]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 17]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 18]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 19]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 20]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 21]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 22]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 23]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 24]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 25]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 26]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 27]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 28]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 29]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 30]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 74ms (Views: 8.7ms | ActiveRecord: 4.9ms | Allocations: 31744)
+
+
+Started GET "/api/v1/polls/1" for ::1 at 2022-07-05 16:54:42 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@email.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.4ms | Allocations: 1425)
+
+
+Started GET "/user/sign_in" for ::1 at 2022-07-05 16:54:42 -0300
+Processing by Devise::SessionsController#new as */*
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 528)
+
+
+Started GET "/api/v1/polls/1" for ::1 at 2022-07-05 16:55:39 -0300
+Processing by Api::V1::PollsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:47:in `set_poll'
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 0.5ms | Allocations: 2339)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-13 17:04:24 -0300
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#index as JSON
+Completed 401 Unauthorized in 20ms (ActiveRecord: 0.0ms | Allocations: 158)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-13 17:05:31 -0300
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "undefined"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 59ms (ActiveRecord: 1.4ms | Allocations: 1424)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-14 14:10:09 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "undefined"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 15ms (ActiveRecord: 1.8ms | Allocations: 1424)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-14 15:00:57 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "undefined"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 18ms (ActiveRecord: 2.2ms | Allocations: 1424)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-14 15:19:06 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "undefined"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 22ms (ActiveRecord: 2.3ms | Allocations: 1424)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-14 15:30:57 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (1.7ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (3.7ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.0ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.0ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.9ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (2.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 11]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 12]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.9ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 13]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 14]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.0ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 15]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 16]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (2.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 17]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 18]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 19]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 20]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.0ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 21]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 22]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 23]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 24]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 25]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 26]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.0ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 27]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.0ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 28]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.9ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 29]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.9ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 30]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 675ms (Views: 40.3ms | ActiveRecord: 40.2ms | Allocations: 31747)
+
+
+Started GET "/api/v1/polls.json" for ::1 at 2022-07-14 16:10:40 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PollsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usermail@mail.com"], ["LIMIT", 1]]
+  [1m[36mPoll Load (1.0ms)[0m  [1m[34mSELECT "polls".* FROM "polls" WHERE "polls"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/polls_controller.rb:10:in `map'
+  [1m[36mVote Load (0.7ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 1]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.7ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 2]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 3]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 5]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.8ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 6]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.9ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 7]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 8]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.9ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 9]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 10]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.0ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 11]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.9ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 12]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.9ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 13]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 14]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 15]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.0ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 16]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 17]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.0ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 18]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 19]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 20]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.9ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 21]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 22]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.9ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 23]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 24]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.8ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 25]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 26]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 27]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (0.9ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 28]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.9ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 29]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+  [1m[36mVote Load (1.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."poll_id" = ?[0m  [["poll_id", 30]]
+  ↳ app/models/poll.rb:17:in `as_json_with_votes'
+Completed 200 OK in 557ms (Views: 36.5ms | ActiveRecord: 33.4ms | Allocations: 31748)
+
+

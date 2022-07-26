@@ -3,8 +3,6 @@ import { addPollForm } from '../js/add_poll_form.js'
 
 export const userPollsPage = () => {
     const polls_div_id = 'polls_container'
-    const user_email = 'usermail@mail.com'
-    const user_token = 'YVBNcNLSpReeudbvri8B'
 
     const render_polls_hook = (polls, div_id) => {
         let polls_html_list = ''
