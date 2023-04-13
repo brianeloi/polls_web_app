@@ -15,8 +15,8 @@ export const getCookiesHash = (keys = []) => {
     return cookies_hash
 }
 
-export const makeCookie = (/* { key: "foo", value: "bar" }, { ... } */) => {
-  for (var i = 0; i < arguments.length; i++) {
-    document.cookie = arguments[i].key + "=" + arguments[i].value + "; path=/";
-  }
+
+
+export const makeCookie = (params = {}) => {
+  document.cookie = params.key + "=" + params.value + "; path=/";
 }

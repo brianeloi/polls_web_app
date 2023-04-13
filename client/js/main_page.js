@@ -12,7 +12,7 @@ export const mainPage = () => {
 
   const { user_email, user_token } = getCookiesHash(['user_email', 'user_token'])
   setRequestHeaders({ user_email, user_token })
-  const logged = true // cookies.user_email && cookies.user_token
+  const logged = user_email && user_token
   let page = ''
 
   const { poll_id } = getUrlParams(['poll_id'])
@@ -20,6 +20,7 @@ export const mainPage = () => {
     page = votePage({ poll_id, logged })
   } else {
     if (logged) {
+      console.log('logadoo')
       page = userPollsPage()
     } else {
       page = loginPage()
